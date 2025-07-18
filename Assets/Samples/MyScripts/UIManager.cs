@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class UIManager : MonoBehaviour
         introPanel.SetActive(true); // vorausgesetzt du baust das später
     }
 
-    public void OnSkipIntroClicked()
+    
+    public void LoadMainMenu()
     {
-        welcomePanel.SetActive(false);
-        mainScenePanel.SetActive(true); // vorausgesetzt du baust das später
+        SceneManager.LoadScene("MenueScene"); // ← Name der Zielszene!
     }
 }
